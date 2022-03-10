@@ -6,12 +6,16 @@ import turtle
 # then you do not fully understand functions
 # and should review how they work or ask for help
 
-
-
-
-
-
-
+def drawSineCurve(dart):
+  import math
+  x = math.radians(-360)
+  dart.goto(x,0)
+  dart.down()
+  drawsincurve(dart)
+  for i in range(8):
+    y = math.sin(math.radians(90))
+    dart.goto(y)
+    
 
 ##########  Do Not Alter Any Code Past Here ########
 def main():
@@ -30,4 +34,4 @@ def main():
     drawCosineCurve(dart)
     drawTangentCurve(dart)
     wn.exitonclick()
-main()
+#main()
