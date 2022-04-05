@@ -1,10 +1,14 @@
 import turtle
 import math
-########### Your Code here ##############
-# You should only have functions here
-# If you have anything outside of a function, 
-# then you do not fully understand functions
-# and should review how they work or ask for help
+
+intial = turtle.Turtle()
+intial.speed(1)
+intial.up()
+intial.color('blue')
+intial.goto(0,0)
+intial.down()
+intial.right(60)
+intial.goto(-50, -50)
 
 def drawSineCurve(dart):
   wn = turtle.Screen()
@@ -20,6 +24,10 @@ def drawSineCurve(dart):
   dart.up()
   drawCosineCurve(dart)
   drawTangentCurve(dart)
+  drawFlatLine(dart)
+  toCos = -360
+  result = whereDoesCosStart(toCos)
+  print("If", toCos, "is the starting x-coordinate for the Cosine curve, then", result, "is the starting y-coordinate.")
   wn.exitonclick()
 
 def setupWindow(mywindow=None):
@@ -36,6 +44,17 @@ def setupAxis(myturtle=None):
   myturtle.goto(360, 0)
   myturtle.down()
   myturtle.goto(-360, 0)
+  myturtle.up()
+
+def drawFlatLine(myturtle=None):
+  myturtle = turtle.Turtle()
+  myturtle.up()
+  myturtle.goto(-360, 0.5)
+  myturtle.down()
+  for i in range(-360, 360):
+    x = i + 1
+    y = 0.5
+    myturtle.goto(x, y)
   myturtle.up()
 
 def drawCosineCurve(myturtle=None):
@@ -60,8 +79,11 @@ def drawTangentCurve(myturtle=None):
     myturtle.goto(x, y)
   myturtle.up()
 
+def whereDoesCosStart(a):
+  b = math.cos(math.radians(a))
+  return b
 
-
+  
 ##########  Do Not Alter Any Code Past Here ########
 def main():
     #Part A
@@ -77,5 +99,6 @@ def main():
     drawSineCurve(dart)
     drawCosineCurve(dart)
     drawTangentCurve(dart)
+    drawFlatLine(dart)
     wn.exitonclick()
 main()
