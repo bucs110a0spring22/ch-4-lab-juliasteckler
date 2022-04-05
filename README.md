@@ -8,18 +8,18 @@
 _Replace anything surrounded by the `< >` symbols._
 
 ## SUMMARY:
- Have turtle draw a sin function.
+ < Provide a short description of your program's functionality. No more than a couple sentences. >
 
 ## GRACE DAYS
-Grace days used for this assignment: 2
+Grace days used for this assignment: < # >
 
-Grace days remaining: 1/5
+Grace days remaining: < # >/5
 
 ## KNOWN BUGS AND INCOMPLETE PARTS:
- I just don't understand why nothing is happening no matter what I do, so I left what I thought might work and didn't continue to part B.
+ < What parts of the project you were not able to complete >
 
 ## REFERENCES:
- N/A
+ < List any outside resources used >
 
 ## MISCELLANEOUS COMMENTS:
-N/A
+ < Anything you would like the grader to know >
